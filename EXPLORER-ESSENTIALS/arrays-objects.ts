@@ -19,4 +19,4 @@ let possibleResults: [number, number]; // This is called a tuple, it's used when
 //Example -
 
 possibleResults = [1, -1]; // Fixed length of two. No error.
-possibleResults = [10, 20, 30]; // Exceeds length of two. Error "Type '[number, number, number]' is not assignable to type '[number, number]'."Source has 3 element(s) but target allows only 2. "
+//possibleResults = [10, 20, 30]; // Exceeds length of two. Error "Type '[number, number, number]' is not assignable to type '[number, number]'."Source has 3 element(s) but target allows only 2. "
