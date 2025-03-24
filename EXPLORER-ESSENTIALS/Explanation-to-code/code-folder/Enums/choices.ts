@@ -10,9 +10,9 @@ enum Role {
 // above code for various purpose.
 // By using enums in typescript we can use these enum keyword as choices for
 // our code
-let userRole = Role.Admin;
-userRole = Role.Guest;
-userRole = Role.Editor;
+// let userRole = Role.Admin;
+// userRole = Role.Guest;
+// userRole = Role.Editor;
 
 // Because enums is not vanilla javascript feature type script creates a work
 // around for our code when compiled to java script
@@ -29,3 +29,19 @@ var userRole = Role.Admin;
 userRole = Role.Guest;
 userRole = Role.Editor;
 */
+
+// There is also a more popular way to write enums.
+//Example -
+
+let userRole: "admin" | "editor" | "guest" | "user" = "admin";
+
+userRole = "editor";
+
+// Example 2 -
+
+let possibleResults: [1 | -1, 1 | -1];
+
+possibleResults = [1, 1]; // Because of this either 1 or -1 will be accepted,
+// no other values will be accepted.
+
+// possibleResults = [2, -1];// Error "Type '2' is not assignable to type '1 | -1'."
