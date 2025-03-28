@@ -120,4 +120,3 @@ user.greet();
 5. **Functions in Objects**  
    - Function types can be part of an object structure, ensuring type safety when defining methods in objects.
 
-Let me know if you need any clarification! 🚀
