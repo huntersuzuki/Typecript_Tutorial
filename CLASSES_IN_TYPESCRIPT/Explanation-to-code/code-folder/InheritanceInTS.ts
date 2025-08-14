@@ -1,7 +1,12 @@
 class User {
-  private _firstName: string = "";
-  private _lastName: string = "";
-
+  // private _firstName: string = "";
+  // private _lastName: string = "";
+  // Because the private object/variable are not accessible to the extended class,
+  // We use protected instead of private as an access-specifier/modifier, because of this feature,
+  // we can use the objects or variable inside the extended class but cannot access outside the class,
+  // this gives it a security advantage.
+  protected _firstName: string = "";
+  protected _lastName: string = "";
   // Here with the use of setters the values of the properties are manually set with the use of 'set' keyword.
   set firstName(name: string) {
     if (name === "") {
@@ -38,5 +43,8 @@ class Employee extends User {
     super(); // This keyword is used to call the base class/parent class constructor.
     // super.firstName = "Pranay" // We can also use the super keyword to access the parent class/base class methods/functions.
   }
-  work() {}
+  work() {
+    console.log(this._firstName);
+    console.log((this.firstName = "Pranay"));
+  }
 }
